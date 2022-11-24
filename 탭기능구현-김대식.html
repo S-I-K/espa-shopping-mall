@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>베스트 셀러</title>
+  </head>
+  <!-- css -->
+  <style>
+    @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border;
+      font-family: "Noto Sans KR", sans-serif;
+    }
+    .wrap {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      color: #191919;
+    }
+    .label-area {
+      text-align: center;
+      width: 100%;
+    }
+    input {
+      display: none;
+    }
+    label {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      border-radius: 50%;
+      margin: 40px 4px;
+      font-size: 11px;
+      line-height: 24px;
+      cursor: pointer;
+      border: 1px solid #222;
+    }
+    #tab1:checked ~ .tab1-content,
+    #tab2:checked ~ .tab2-content,
+    #tab3:checked ~ .tab3-content,
+    #tab4:checked ~ .tab4-content,
+    #tab5:checked ~ .tab5-content {
+      display: block;
+    }
+    #tab1:checked ~ .tab1,
+    #tab2:checked ~ .tab2,
+    #tab3:checked ~ .tab3,
+    #tab4:checked ~ .tab4,
+    #tab5:checked ~ .tab5 {
+      background: #222;
+      color: #fff;
+      font-weight: bold;
+    }
+    .content {
+      width: 100%;
+      height: 200px;
+      display: none;
+    }
+    .tab1-content {
+      background: #fcc;
+    }
+    .tab2-content {
+      background: #ffc;
+    }
+    .tab3-content {
+      background: #cff;
+    }
+    .tab4-content {
+      background: #ccf;
+    }
+    .tab5-content {
+      background: #fcf;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <h1>베스트 셀러</h1>
+      <div class="label-area">
+        <input type="radio" id="tab1" name="tab" checked />
+        <label for="tab1" class="tab1">1</label>
+        <input type="radio" id="tab2" name="tab" />
+        <label for="tab2" class="tab2">2</label>
+        <input type="radio" id="tab3" name="tab" />
+        <label for="tab3" class="tab3">3</label>
+        <input type="radio" id="tab4" name="tab" />
+        <label for="tab4" class="tab4">4</label>
+        <input type="radio" id="tab5" name="tab" />
+        <label for="tab5" class="tab5">5</label>
+
+        <div class="tab1-content content"></div>
+        <div class="tab2-content content"></div>
+        <div class="tab3-content content"></div>
+        <div class="tab4-content content"></div>
+        <div class="tab5-content content"></div>
+      </div>
+    </div>
+  </body>
+</html>
