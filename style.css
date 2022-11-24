@@ -381,6 +381,9 @@ main {
   float: left;
   margin-bottom: 60px;
 }
+.tab-inner > ul > li:nth-child(5) {
+  clear: both;
+}
 
 /* #women-box {
   background: #fcc;
@@ -459,6 +462,50 @@ main {
   top: 0;
 }
 
+.tab-inner > ul > li:nth-child(5) .rank,
+.tab-inner > ul > li:nth-child(6) .rank,
+.tab-inner > ul > li:nth-child(7) .rank,
+.tab-inner > ul > li:nth-child(8) .rank {
+  background: #b5b5b5;
+}
+
 .tab-inner .box-inner > a {
   position: relative;
+}
+
+/* animation */
+@keyframes tabAni {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.tab-inner > ul > li:nth-child(1) {
+  animation: tabAni 0.8s;
+}
+.tab-inner > ul > li:nth-child(2) {
+  animation: tabAni 1.2s;
+}
+.tab-inner > ul > li:nth-child(3) {
+  animation: tabAni 1.6s;
+}
+.tab-inner > ul > li:nth-child(4) {
+  animation: tabAni 2s;
+}
+.tab-inner > ul > li:nth-child(5) {
+  animation: tabAni 2.4s;
+}
+.tab-inner > ul > li:nth-child(6) {
+  animation: tabAni 2.8s;
+}
+.tab-inner > ul > li:nth-child(7) {
+  animation: tabAni 3.2s;
+}
+.tab-inner > ul > li:nth-child(8) {
+  animation: tabAni 3.6s;
 }
