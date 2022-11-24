@@ -377,7 +377,11 @@ main {
 }
 .tab-inner > ul > li {
   width: calc(100% / 4);
+  text-align: left;
+  float: left;
+  margin-bottom: 60px;
 }
+
 /* #women-box {
   background: #fcc;
 }
@@ -438,4 +442,23 @@ main {
 #tab4:checked ~ .tab4 {
   font-weight: bold;
   letter-spacing: -0.09em;
+}
+
+.rank {
+  display: inline-block;
+  width: 50px;
+  line-height: 50px;
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  background: #e86434;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.tab-inner .box-inner > a {
+  position: relative;
 }
