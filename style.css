@@ -46,6 +46,12 @@ a {
   font-weight: 500;
 }
 
+#headerArea.active {
+  position: fixed;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #aaa;
+}
 #headerArea {
   width: 100%;
   height: 90px;
