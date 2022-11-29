@@ -31,6 +31,15 @@ a {
   color: #1a1a1a;
   text-align: center;
   margin: 60px 0 50px 0;
+
+  transition: all 0.4s;
+  transform: translateY(150px);
+  opacity: 0;
+  z-index: 99;
+}
+.title.scrolled {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* header */
@@ -253,10 +262,82 @@ main {
   left: 50%;
   margin-left: -100%;
 }
+/* slide controller */
+#slide .bx-prev,
+#slide .bx-next {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 70;
+  background: url("./imgs/slide-arrow.png") no-repeat center / cover;
+}
+#slide .bx-prev {
+  left: 5%;
+}
+#slide .bx-next {
+  right: 5%;
+  transform: rotate(180deg);
+}
+/* slide pager */
+#slide .bx-pager {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translate(0, 50%);
+}
+#slide .bx-pager-link {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+#slide .bx-pager-link.active {
+  background: rgba(255, 255, 255, 1);
+}
+#slide .bx-pager-item {
+  float: left;
+  margin: 0 5px;
+  font-size: 0;
+}
+
+.style-contents {
+  transition: all 0.4s;
+  transform: translateY(150px);
+  opacity: 0;
+}
+.style-contents.scrolled {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 .style-contents > ul > li {
   float: left;
   width: calc(100% / 3);
+}
+.style-contents .bx-viewport {
+  padding-bottom: 80px;
+}
+.style-contents .bx-pager {
+  text-align: center;
+}
+.style-contents .bx-pager-item {
+  display: inline-block;
+}
+.style-contents .bx-pager-link {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background: #b3b3b3;
+  border-radius: 50%;
+  margin: 0 4px;
+  font-size: 0;
+}
+.style-contents .bx-pager-link.active {
+  background: #545454;
 }
 
 .box-inner {
@@ -328,6 +409,13 @@ main {
   margin-bottom: 80px;
 }
 #whats-inner {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 0.4s;
+}
+#whats-inner.scrolled {
+  transform: translateY(0px);
+  opacity: 1;
 }
 #whats-inner > ul {
 }
@@ -420,6 +508,16 @@ main {
 }
 #tab4:checked ~ #collabo-box {
   display: block;
+}
+
+#best-area {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 0.4s;
+}
+#best-area.scrolled {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .best-inner input {
